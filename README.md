@@ -1,5 +1,6 @@
 # screen-formatting
 
+A simple program dedicated to formatting a text file to output to the screen
 
 ## Compilation and Execution
 
