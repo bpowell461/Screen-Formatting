@@ -1,15 +1,24 @@
 # screen-formatting
 
-## Helpful Links
 
-Fortran: http://math.hawaii.edu/~gautier/math_190_lecture_11.pdf
+## Compilation and Execution
 
-Cobol: https://www.ibm.com/support/knowledgecenter/en/SSQ2R2_14.1.0/com.ibm.etools.rdz.language.editors.doc/topics/tzdebeformatter_cobol.html
+### Fortran
+**_Compilation_**
+`gfortran -g -ffpe-trap=zero,invalid,overflow,underflow antiquity.f95`
 
-Lisp: http://gigamonkeys.com/book/a-few-format-recipes.html
+**Execution**
+`a.out <_arg_>`
+Note: For some reason that is the only way that my Fortran will run.
 
-Ada: https://stackoverflow.com/questions/6032210/is-there-a-way-to-format-text-output-in-ada
+### Lisp
+**Execution**
+`./antiquity.lisp <_arg_>`
 
-##Compilation and Execution
+### Ada
+**_Compilation_**
+`gnatmake antiquity.adb`
 
-Fortran: gfortran -g -ffpe-trap=zero,invalid,overflow,underflow antiquity.f95
+**Execution**
+`antiquity <_arg_>`
+
