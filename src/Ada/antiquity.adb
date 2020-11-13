@@ -12,7 +12,7 @@ procedure antiquity is
 
 	In_File : Ada.Text_IO.File_Type;
 	value : Character;
-	string_array : array (1..5000000) of Character;
+	string_array : array (1..5000000) of Character; --Very big character array
 	pos : Integer;
 	word : Unbounded_String;
 	line : Unbounded_String;
