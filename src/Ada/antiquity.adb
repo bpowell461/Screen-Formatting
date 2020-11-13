@@ -6,6 +6,8 @@ with Ada.Strings.Unbounded;
 use Ada.Strings.Unbounded;
 with Ada.Integer_Text_IO;           
 use Ada.Integer_Text_IO;
+with Ada.Command_Line; 
+use Ada.Command_Line;
 procedure antiquity is
 
 	In_File : Ada.Text_IO.File_Type;
@@ -36,7 +38,7 @@ begin
 	longLineCount := 0;
 	shortLineCount := 100;
 	index:= 0;
-	Ada.Text_IO.Open (File => In_File, Mode => Ada.Text_IO.In_File, Name => "/pub/pounds/CSC330/translations/KJV.txt");
+	Ada.Text_IO.Open (File => In_File, Mode => Ada.Text_IO.In_File, Name => Argument(1));
 
 	pos := 0;
 	while not Ada.Text_IO.End_Of_File(In_File) loop
