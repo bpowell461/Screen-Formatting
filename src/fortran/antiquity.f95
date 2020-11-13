@@ -29,12 +29,12 @@ subroutine buildLines(filesize)
 
         100 read (5, rec=counter, err=200) input
                  if(input==' ' .or. input == char(10)) then
-                        array(wordIndex)=string
+                        array(wordIndex)=string       !reading in characters and appending to string to put into array
                         wordIndex=wordIndex+1
                         string=""
                  else
 
-                        string = string//input
+                        string = string//input   !appending to string
                  end if
 
                  counter = counter + 1
@@ -47,14 +47,14 @@ subroutine buildLines(filesize)
 
         close(5)  
         longLine="xxx"
-        shortLine="xxx"
+        shortLine="xxx" !example strings
         longCount=0
         shortCount=100
         do i=1, wordIndex
 
                 string = array(i)
                 string = adjustl(trim(string))
-                call checkWord(string)
+                call checkWord(string)  !removing numbers from words
 
               if (isWord(string)) then
                 wordCount=wordCount + 1
@@ -82,7 +82,7 @@ subroutine buildLines(filesize)
                         line = string
                         line = line // " "
                         
-                        charCount = 60 - (LEN(line))
+                        charCount = 60 - (LEN(line))  !60 Characters per Line
 
                         lineIndex = lineIndex +1
                         wordCount=0
@@ -107,7 +107,7 @@ subroutine buildLines(filesize)
         print*, "  ", line
 
         102 format(a7)
-        103 format(i12)
+        103 format(i12) !Fortran format statements
         104 format(a12)
 
         
